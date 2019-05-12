@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-const controllers = require('./controllers/router');
+const controllers = require('./controllers/routes');
 const app = express();
 
 app.use(controllers);

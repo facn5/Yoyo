@@ -1,9 +1,10 @@
-const express = require("express");
+const express = require('express');
+
 const routers = express.Router();
 
 
-routers.get("/", (req, res) => {
-  res.send("Main Layout Page");
+routers.get('/', (req, res) => {
+  res.send('main page layout');
 });
 
 

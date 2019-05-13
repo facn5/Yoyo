@@ -44,7 +44,7 @@ class ParentSignup extends React {
       const data = JSON.stringify(this.state);
       console.log("(Fake) submitting data: ", data)
       this.setState({ name: '', password: '', phone: '', email: '', location: '',
-      childAges: '', childSuperpowers: '', arabic: false, english: false, hebrew: false, russian: false});
+      arabic: false, english: false, hebrew: false, russian: false, childAges: '', childSuperpowers: ''});
     };
 
     render() {
@@ -67,7 +67,7 @@ class ParentSignup extends React {
         <input type='email' id='email' name='email' value={this.state.email}
         onChange={this.handleChange} />
 
-        <fieldset><legend>Childrens Languages</legend>Arabic:
+        <fieldset><legend>Child Languages</legend>Arabic:
         <input type='checkbox' id='arabic' name='arabic' value='arabic' checked={this.state.arabic}
         onChange={this.handleChange} />English:
         <input type='checkbox' id='english' name='english' value='english' checked={this.state.english}
@@ -90,6 +90,21 @@ class ParentSignup extends React {
         <input type='checkbox' id='7 to 8' name='7 to 8' value='7 to 8' checked={this.state.childAges}
         onChange={this.handleChange} />9 to 10:
         <input type='checkbox' id='9 to 10' name='9 to 10' value='9 to 10' checked={this.state.childAges}
+        onChange={this.handleChange} />
+        </fieldset>
+
+        <fieldset><legend>Superpowers</legend>Sports:
+        <input type='checkbox' id='Sports' name='Sports' value='Sports' checked={this.state.childSuperpowers}
+        onChange={this.handleChange} />Art:
+        <input type='checkbox' id='Art' name='Art' value='Art' checked={this.state.childSuperpowers}
+        onChange={this.handleChange} />Theater:
+        <input type='checkbox' id='Theater' name='Theater' value='Theater' checked={this.state.childSuperpowers}
+        onChange={this.handleChange} />Computers:
+        <input type='checkbox' id='Computers' name='Computers' value='Computers' checked={this.state.childSuperpowers}
+        onChange={this.handleChange} />Music:
+        <input type='checkbox' id='Music' name='Music' value='Music' checked={this.state.childSuperpowers}
+        onChange={this.handleChange} />Social:
+        <input type='checkbox' id='Social' name='Social' value='Social' checked={this.state.childSuperpowers}
         onChange={this.handleChange} />
         </fieldset>
 

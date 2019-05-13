@@ -29,15 +29,15 @@ class CreateEvent extends React.Component {
       onChange={this.handleChange} />
 
       <label htmlFor='location'>Location:</label>
-      <input type='text' id='location' location='location' value={this.state.location}
+      <input type='text' id='location' name='location' value={this.state.location}
       onChange={this.handleChange} />
 
       <label htmlFor='description'>Description:</label>
-      <input type='text' id='description' description='description' value={this.state.description}
+      <input type='text' id='description' name='description' value={this.state.description}
       onChange={this.handleChange} />
 
       <label htmlFor='photo'>Photo:</label>
-      <input type='text' id='photo' photo='photo' value={this.state.photo}
+      <input type='text' id='photo' name='photo' value={this.state.photo}
       onChange={this.handleChange} />
 
       <fieldset><legend>Days</legend>Sunday:
@@ -57,17 +57,16 @@ class CreateEvent extends React.Component {
       checked={this.state.saturday} onChange={this.handleChange} />
       </fieldset>
 
-
       <label htmlFor='singlePrice'>Single Price:</label>
-      <input type='text' id='singlePrice' singlePrice='singlePrice' value={this.state.singlePrice}
+      <input type='text' id='singlePrice' name='singlePrice' value={this.state.singlePrice}
       onChange={this.handleChange} />
 
       <label htmlFor='termPrice'>Term Price:</label>
-      <input type='text' id='termPrice' termPrice='termPrice' value={this.state.termPrice}
+      <input type='text' id='termPrice' name='termPrice' value={this.state.termPrice}
       onChange={this.handleChange} />
 
       <label htmlFor='maxChild'>Max Child:</label>
-      <input type='text' id='maxChild' maxChild='maxChild' value={this.state.maxChild}
+      <input type='text' id='maxChild' name='maxChild' value={this.state.maxChild}
       onChange={this.handleChange} />
 
       <fieldset><legend>Child Languages</legend>Arabic:

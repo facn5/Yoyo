@@ -25,8 +25,15 @@ routers.post('/create-user', (req, res) => {
   res.redirect('/parent-profile');
 });
 
-routers.get('parent-profile', (req, res) => {
+routers.get('/parent-profile', (req, res) => {
   // call the function that gets personal info and booked events from the parent's profile
+
+  res.redirect('/');
+});
+
+routers.get('/parent-events', (req, res) => {
+  // call the function that Get list of events in the parent's location from the database
+
 
   res.redirect('/');
 });

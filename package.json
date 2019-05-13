@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "app for parents to find events suited to their child's age and interests",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "express": "^4.16.4"
+  },
   "devDependencies": {
     "@babel/core": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
@@ -36,7 +38,8 @@
     "webpack-cli": "^3.3.2",
     "webpack-dev-server": "^3.3.1"
   },
-  "scripts": {"start": "webpack-dev-server --open --hot --mode development",
+  "scripts": {
+    "start": "webpack-dev-server --open --hot --mode development",
     "build": "webpack --mode production",
     "test": "jest"
   },

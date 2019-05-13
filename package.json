@@ -36,7 +36,8 @@
     "webpack-cli": "^3.3.2",
     "webpack-dev-server": "^3.3.1"
   },
-  "scripts": {
+  "scripts": {"start": "webpack-dev-server --open --hot --mode development",
+    "build": "webpack --mode production",
     "test": "jest"
   },
   "repository": {

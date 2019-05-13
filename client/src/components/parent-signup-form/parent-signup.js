@@ -78,6 +78,21 @@ class ParentSignup extends React {
         onChange={this.handleChange} />
         </fieldset>
 
+        <fieldset><legend>Child Ages</legend>birth to 1:
+        <input type='checkbox' id='birth to 1' name='birth to 1' value='birth to 1' checked={this.state.childAges}
+        onChange={this.handleChange} />1 to 2:
+        <input type='checkbox' id='1 to 2' name='1 to 2' value='1 to 2' checked={this.state.childAges}
+        onChange={this.handleChange} />2 to 4:
+        <input type='checkbox' id='2 to 4' name='2 to 4' value='2 to 4' checked={this.state.childAges}
+        onChange={this.handleChange} />5 to 6:
+        <input type='checkbox' id='5 to 6' name='5 to 6' value='5 to 6' checked={this.state.childAges}
+        onChange={this.handleChange} />7 to 8:
+        <input type='checkbox' id='7 to 8' name='7 to 8' value='7 to 8' checked={this.state.childAges}
+        onChange={this.handleChange} />9 to 10:
+        <input type='checkbox' id='9 to 10' name='9 to 10' value='9 to 10' checked={this.state.childAges}
+        onChange={this.handleChange} />
+        </fieldset>
+
         <button type='submit'>Submit</button>
 
         </form>

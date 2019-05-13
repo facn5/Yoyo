@@ -38,5 +38,11 @@ routers.get('/parent-events', (req, res) => {
   res.redirect('/');
 });
 
+routers.post('/book-event', (req, res) => {
+  // Add event to parent's event list in database
+
+  res.redirect('/parent-profile');
+});
+
 
 module.exports = routers;

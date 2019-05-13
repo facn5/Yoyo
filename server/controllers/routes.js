@@ -51,5 +51,10 @@ routers.get('/get-info', (req, res) => {
   res.redirect('/');
 });
 
+routers.get('/get-suggestions', (req, res) => {
+// calls a function that gets suggested activities, filtered from events list by age and superpowers
+  res.redirect('/');
+});
+
 
 module.exports = routers;

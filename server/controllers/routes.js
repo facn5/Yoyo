@@ -44,5 +44,12 @@ routers.post('/book-event', (req, res) => {
   res.redirect('/parent-profile');
 });
 
+routers.get('/get-info', (req, res) => {
+  // calls a function that gets child development info based on ages
+  // gets it from a JSON file
+
+  res.redirect('/');
+});
+
 
 module.exports = routers;

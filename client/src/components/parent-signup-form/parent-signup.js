@@ -29,8 +29,8 @@ class ParentSignup extends React {
   }
 
   state = {
-    name: '', password: '', phone: '', email: '', location: '', childAges: '', childSuperpowers: '',
-    childLanguages: '', consent: false,}
+    name: '', password: '', phone: '', email: '', location: '', childAges: '',
+    childSuperpowers: '', arabic: false, english: false, hebrew: false, russian: false}
 
     handleChange = event => {
       const target = event.target;
@@ -43,8 +43,8 @@ class ParentSignup extends React {
       event.preventDefault();
       const data = JSON.stringify(this.state);
       console.log("(Fake) submitting data: ", data)
-      this.setState({ name: '', password: '', phone: '', email: '', location: '', childAges: '', childSuperpowers: '',
-      childLanguages: '', consent: false});
+      this.setState({ name: '', password: '', phone: '', email: '', location: '',
+      childAges: '', childSuperpowers: '', arabic: false, english: false, hebrew: false, russian: false});
     };
 
     render() {
@@ -67,15 +67,22 @@ class ParentSignup extends React {
         <input type='email' id='email' name='email' value={this.state.email}
         onChange={this.handleChange} />
 
-        <label htmlFor='consent'>Can we email you?</label>
-        <input type='checkbox' id='consent' name='consent' checked={this.state.consent}
+        <fieldset><legend>Childrens Languages</legend>Arabic:
+        <input type='checkbox' id='arabic' name='arabic' value='arabic' checked={this.state.arabic}
+        onChange={this.handleChange} />English:
+        <input type='checkbox' id='english' name='english' value='english' checked={this.state.english}
+        onChange={this.handleChange} />Hebrew:
+        <input type='checkbox' id='hebrew' name='hebrew' value='hebrew' checked={this.state.hebrew}
+        onChange={this.handleChange} />Russian:
+        <input type='checkbox' id='russian' name='russian' value='russian' checked={this.state.russian}
         onChange={this.handleChange} />
+        </fieldset>
 
         <button type='submit'>Submit</button>
 
         </form>
       );
-    }  
+    }
 }
 
 export default ParentSignup;

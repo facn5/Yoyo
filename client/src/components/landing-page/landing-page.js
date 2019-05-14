@@ -1,20 +1,20 @@
 import React from 'react' ;
-import Login from '../login/login' ;
-import SignUp from '../signUp/signUp' ;
-import './landingPage.css'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Login from '../login/login' ;
+import {ParentSignup} from '../parent-signup-form/parent-signup';
+import './landingPage.css';
+
 export default class SignupLogin extends React.Component {
   render() {
     return (
       <div>
-<h1>he</h1>
 <Router>
 
         <Link  to="/signup"><button>Signup</button></Link>
 
         <Link to="/login/"><button>Login</button></Link>
 
-      <Route path="/signup/" component={SignUp} />
+      <Route path="/signup/" component={ParentSignup} />
       <Route path="/login/" component={Login} />
 
 

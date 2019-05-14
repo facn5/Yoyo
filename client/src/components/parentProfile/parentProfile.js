@@ -2,6 +2,7 @@ import React from 'react' ;
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Events from '../events/events'
 import ParentInfo from '../parentInfo/parentInfo'
+
 export default class ParentProfile extends React.Component {
   render() {
     return (

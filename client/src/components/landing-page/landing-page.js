@@ -5,11 +5,6 @@ import './landingPage.css'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 export default class SignupLogin extends React.Component {
   render() {
-    var styles1 = {
-
-     };
-
-
     return (
       <div>
 <h1>he</h1>

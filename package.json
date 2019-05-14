@@ -4,7 +4,8 @@
   "description": "app for parents to find events suited to their child's age and interests",
   "main": "index.js",
   "dependencies": {
-    "express": "^4.16.4"
+    "compression": "^1.7.4",
+    "express": "^4.16.4",
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",

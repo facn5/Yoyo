@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
+import HeaderC from './header/index';
+import Navbar from './navbar/index';
 
 class App extends Component {
   render() {
     return (
-      <div><h1>React and Webpack/Babel setup</h1></div>
+      <div>
+       <HeaderC/>
+      <Navbar/>
+      </div>
     )
   }
 }

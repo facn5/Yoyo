@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 
-class ParentSignup extends React.Component {
+export class ParentSignup extends Component {
   state = {
-   name: '', password: '', phone: '', email: '', location: ''}
+   name: '', password: '', phone: '', email: '', location: ''
+ };
 
     handleChange = event => {
      const target = event.target;
@@ -85,5 +86,3 @@ class ParentSignup extends React.Component {
      );
    }
 }
-
-export default ParentSignup;

@@ -30,9 +30,9 @@ handleChange = event => {
        <label htmlFor='password'>Password:</label>
       <input type='password'  name='password' value={this.state.password}  onChange={this.handleChange} />
       </div>
-      <div className="submit">
+
       <button type='submit'>Submit</button>
-      </div>
+  
 
 </form>
   </div>

@@ -1,6 +1,6 @@
 
 import React, { Component } from "react";
-
+import './signup.css'	
 export class ParentSignup extends Component {
   state = {
     name: "",

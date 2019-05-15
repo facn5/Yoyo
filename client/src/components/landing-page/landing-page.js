@@ -12,7 +12,7 @@ export default class SignupLogin extends React.Component {
   };
   render() {
     return (
-
+  <div>
         <Router>
 <div className="main-container">
 
@@ -20,22 +20,16 @@ export default class SignupLogin extends React.Component {
 <img src="https://user-images.githubusercontent.com/32282170/57733684-01464600-7698-11e9-89e7-b9debad0bee0.png"/>
 </div>
 
-          <Link to="/signup">
-            <button
-              className={this.state.landingPage ? "show" : "hide"}
-              onClick={this.landingPageStatus}
-              style={{ textDecoration: 'none' }}
-            >
+          <Link to="/signup" onClick={this.landingPageStatus}  className={this.state.landingPage?"show":"hide"} style={{ textDecoration: 'none' }}>
+            <button className="signup" >
               Signup
             </button>
           </Link>
 
-          <Link to="/login/">
-            <button
-              className={this.state.landingPage ? "show" : "hide"}
-              onClick={this.landingPageStatus}
-              style={{ textDecoration: 'none' }}
-            >
+          <Link to="/login/"      className={this.state.landingPage ? "show" : "hide"}
+                                  onClick={this.landingPageStatus}
+                                  style={{ textDecoration: 'none' }}>
+            <button className="login" >
               Login
             </button>
           </Link>
@@ -44,6 +38,7 @@ export default class SignupLogin extends React.Component {
           <Route path="/login/" component={Login} />
           </div>
         </Router>
+        </div>
     );
   }
 }

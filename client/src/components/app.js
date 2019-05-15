@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import HeaderC from './header/index';
 import Navbar from './navbar/index';
 import SignupLogin from './landing-page/landing-page';

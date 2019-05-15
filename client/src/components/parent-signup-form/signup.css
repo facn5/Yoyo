@@ -1,0 +1,24 @@
+input[type=text],input[type=password],input[type=phone],input[type=email]{
+ background-color: #80EDEF;
+ width: 90%;
+ padding: 12px;
+ border: 1px solid #ccc;
+ border-radius: 10px;
+}
+
+h1{
+  display: flex;
+  justify-content: center;
+  font-size: 28px;
+}
+button[type=submit]{
+display: flex;
+justify-content: center;
+align-self: center;
+text-align: center;
+}
+.submit{
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+}

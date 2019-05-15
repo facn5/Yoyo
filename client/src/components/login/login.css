@@ -1,0 +1,13 @@
+.submit{
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+}
+.password{
+  margin-top: 10%;
+}
+h1{
+  display: flex;
+  justify-content: center;
+  font-size: 28px;
+}

@@ -1,13 +1,22 @@
+
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+} from "react-router-dom";
 export class ParentSignup extends Component {
   state = {
     name: "",
     password: "",
     phone: "",
     email: "",
-    location: ""
+    location: "",
+
   };
+
+
+
   handleChange = event => {
     const target = event.target;
     const value = target.type === "checkbox" ? target.checked : target.value;
@@ -26,10 +35,16 @@ export class ParentSignup extends Component {
       email: "",
       location: ""
     });
+
+     this.props.history.push('/event')
   };
+
+
+
 
   render() {
     return (
+
       <form onSubmit={this.handleSubmit}>
         <label htmlFor="name">Name:</label>
         <input
@@ -220,9 +235,7 @@ export class ParentSignup extends Component {
           />
         </fieldset>
 
-        <button type="submit" onClick={() => this.props.history.push("/event")}>
-          Submit
-        </button>
+        <button type="submit"  >Submit</button>
       </form>
     );
   }

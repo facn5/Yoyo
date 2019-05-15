@@ -1,8 +1,27 @@
-/* .link {
-  border: 10px;
-} */
+.main-container{
+  margin-top: 20%;
+}
+.login{
+ margin: 0 auto;
+ display: flex;
+ text-align: center;
+ width:60%;
+ margin-bottom: 5%;
+ margin-top: 10%;
+}
+.signup{
+ margin: 0 auto;
+ display: flex;
+ text-align: center;
+ width:60%;
+ margin-bottom: 5%;
+ margin-top: 10%;
+}
+.image{
+  display: flex;
+justify-content: center;
+}
 button{
-  display: inline-block;
   box-shadow:inset 0px -3px 7px 0px #29bbff;
 	background-color:#6FDDED;
 	border-radius:3px;

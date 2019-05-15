@@ -4,18 +4,17 @@ const cors = require('cors');
 const bodyParser = require("body-parser");
 const logger = require("morgan");
 const Data = require("./data");
+require('env2')('../config.env');
 
+let DB_URL = process.env.DB_URL;
 const API_PORT = 3001;
 const app = express();
 app.use(cors());
 const router = express.Router();
 
-const dbRoute = 'mongodb+srv://yoyo-team:1020304050@yoyodb-rm67b.mongodb.net/test?retryWrites=true';
-
-mongoose.connect(
-  dbRoute,
-  { useNewUrlParser: true }
-);
+mongoose.connect(DB_URL, { useNewUrlParser: true })
+  .then(() => console.log('Database connected successfully'))
+  .catch(err => console.log(err));
 
 let db = mongoose.connection;
 

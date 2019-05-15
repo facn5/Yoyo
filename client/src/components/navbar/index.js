@@ -1,22 +1,24 @@
 import React from "react";
-import StyledButton from '../button/index'
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { StyledButton } from "../button/index";
+import Events from "../events/events";
+import ParentInfo  from "../parentInfo/parentInfo";
+import ParentProfile  from "../parentProfile/parentProfile";
 import "./index.css";
 
 export default class navbar extends React.Component {
-   render() {
-return (
-
-  <div className="navbar">
-
-<StyledButton name="profile"/>
-<StyledButton name="events"/>
-<StyledButton name="info"/>
-
-
-   </div>
- );
-
-
-   }
-
+  render() {
+    return (
+      <Router>
+        <div className="navbar">
+          <StyledButton name="profile" url="/profile/" />
+          <StyledButton name="events" url="/events/" />
+          <StyledButton name="info" url="/info/" />
+        </div>
+        <Route path="/info/" component={ParentInfo} />
+        <Route path="/events/" component={Events} />
+        <Route path="/profile/" component={ParentProfile} />
+      </Router>
+    );
+  }
 }

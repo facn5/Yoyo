@@ -82,7 +82,9 @@ export class ParentSignup extends Component {
        checked={this.state.childSuperpowers} onChange={this.handleChange} />
        </fieldset>
 
-        <button type='submit'>Submit</button>
+       <div className="submit">
+       <button type='submit'>Submit</button>
+       </div>
 
         </form>
         </>

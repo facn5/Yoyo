@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import './signup.css'
 export class ParentSignup extends Component {
   state = {
    name: '', password: '', phone: '', email: '', location: ''
@@ -21,6 +21,8 @@ export class ParentSignup extends Component {
 
     render() {
      return (
+       <>
+  <h1>  Parent Sign-Up </h1>
        <form onSubmit={this.handleSubmit}>
 
         <label htmlFor='name'>Name:</label>
@@ -80,9 +82,12 @@ export class ParentSignup extends Component {
        checked={this.state.childSuperpowers} onChange={this.handleChange} />
        </fieldset>
 
-        <button type='submit'>Submit</button>
+       <div className="submit">
+       <button type='submit'>Submit</button>
+       </div>
 
         </form>
+        </>
      );
    }
 }

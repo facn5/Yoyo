@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .main-container{
   margin-top: 20%;
 }
@@ -34,4 +35,10 @@ button{
 	padding:9px 23px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #263666;
+}
+.hide{
+  display: none;
+}
+.show{
+  display: block;
 }

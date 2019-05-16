@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Link } from "react-router-dom";
 import Login from "../login/login";
 import { ParentSignup } from "../parent-signup-form/parent-signup";
 import "./landingPage.css";
@@ -13,7 +13,7 @@ export default class SignupLogin extends React.Component {
   render() {
     return (
   <div>
-        <Router>
+
 <div className="main-container">
 
 <div className="image">
@@ -33,11 +33,9 @@ export default class SignupLogin extends React.Component {
               Login
             </button>
           </Link>
-          <Route path="/event" component={Events} />
-          <Route path="/signup/" component={ParentSignup} />
-          <Route path="/login/" component={Login} />
+
           </div>
-        </Router>
+
         </div>
     );
   }

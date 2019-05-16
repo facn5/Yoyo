@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Link } from "react-router-dom";
 import Login from "../login/login";
 import { ParentSignup } from "../parent-signup-form/parent-signup";
 import "./landingPage.css";

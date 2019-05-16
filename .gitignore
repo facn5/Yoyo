@@ -1,4 +1,4 @@
 node_modules
-./client/public
 dist
 config.env
+npm-debug.log

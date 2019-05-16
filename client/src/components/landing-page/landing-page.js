@@ -13,7 +13,7 @@ export default class SignupLogin extends React.Component {
   render() {
     return (
   <div>
-        <Router>
+
 <div className="main-container">
 
 <div className="image">
@@ -33,11 +33,9 @@ export default class SignupLogin extends React.Component {
               Login
             </button>
           </Link>
-          <Route path="/event" component={Events} />
-          <Route path="/signup/" component={ParentSignup} />
-          <Route path="/login/" component={Login} />
+
           </div>
-        </Router>
+
         </div>
     );
   }

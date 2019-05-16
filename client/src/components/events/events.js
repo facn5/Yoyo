@@ -11,7 +11,7 @@ export default class Events extends React.Component {
     return (
       <div>
       <HeaderC/>
-    <h1>Parent's Desk</h1>
+    <h1>Events</h1>
     <Navbar/>
    <div className="twobuttons">
    <button className="next">This Week:12-19 May</button>   <button>Next Week:19-26May </button>

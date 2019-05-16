@@ -5,11 +5,9 @@ const Parents = require('../../database/schemas/Parent.js');
 router.get('/all', async (req, res) => {
   try {
     const parent = await Parents.find();
-    res.json(parent)
+    res.json(parent);
   } catch (err) {
-    res.json({
-      message: err
-    });
+    res.json({ message: err });
   }
 });
 
@@ -36,10 +34,10 @@ router.post('/create', async (req, res) => {
     music: req.body.music,
     social: req.body.social,
   });
-  try{
+  try {
     const savedParent = await parent.save()
     res.json(savedParent);
-  } catch(err) {
+  } catch (err) {
     res.json({ message: err });
   }
 });

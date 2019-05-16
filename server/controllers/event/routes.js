@@ -35,7 +35,7 @@ router.post('/create', async (req, res) => {
   }
 });
 
-router.get('/profile/eventID:', async (req, res) => {
+router.get('/profile/:eventID', async (req, res) => {
   try {
     const event = await Events.findById(req.params.eventID);
     res.json(event);

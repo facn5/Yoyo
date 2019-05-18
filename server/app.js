@@ -1,33 +1,27 @@
-const mongoose = require('mongoose');
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+const path = require('path');
+const compression = require('compression');
 const logger = require('morgan');
-const parentRoute = require('./controllers/parent/routes.js');
-const eventRoute = require('./controllers/event/routes.js');
-const teacherRoute = require('./controllers/teacher/routes.js')
+const eventRouter = require('./routes/event.js');
+const parentRouter = require('./routes/parent.js');
+const teacherRouter = require('./routes/teacher.js');
 require('env2')('../config.env');
 
-let DB_URL = process.env.DB_URL;
-const API_PORT = 3001;
 const app = express();
+
+app.disable('x-powered-by');
+app.use(compression());
 app.use(cors());
-
-mongoose.connect(DB_URL, { useNewUrlParser: true })
-  .then(() => console.log('Database connected successfully'))
-  .catch(err => console.log(err));
-
-const db = mongoose.connection;
-
-db.once("open", () => console.log('connected to the database'));
-db.on("error", console.error.bind(console, "MongoDB connection error:"));
-
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+app.use(express.json());
 app.use(logger('dev'));
 
-app.use('/parent', parentRoute);
-app.use('/event', eventRoute);
-app.use('/teacher', teacherRoute);
+app.use(express.static(path.join(__dirname, '..', 'public'), { maxAge: '30d' }));
 
-app.listen(API_PORT, () => console.log(`LISTENING ON PORT ${API_PORT}`));
+app.use('/event', eventRouter);
+app.use('/parent', parentRouter);
+app.use('/teacher', teacherRouter);
+
+module.exports = app;

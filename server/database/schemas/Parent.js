@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+
 const Schema = mongoose.Schema;
 
 const Parent = new Schema({
@@ -22,6 +23,8 @@ const Parent = new Schema({
   computers: Boolean,
   music: Boolean,
   social: Boolean,
+}, {
+  timestamps: true,
 });
 
 module.exports = mongoose.model('Parent', Parent);

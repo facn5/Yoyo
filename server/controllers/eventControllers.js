@@ -1,19 +1,15 @@
-const express = require('express');
-const Events = require('../../database/schemas/Event.js');
+const Events = require('../database/schemas/Event.js');
 
-const router = express.Router();
-
-
-router.get('/all', async (req, res) => {
+exports.event_all = async (req, res) => {
   try {
     const events = await Events.find();
     res.json(events);
   } catch (err) {
     res.json({ message: err });
   }
-});
+};
 
-router.post('/create', async (req, res) => {
+exports.event_create = async (req, res) => {
   const event = new Events({
     name: req.body.name,
     location: req.body.location,
@@ -33,15 +29,13 @@ router.post('/create', async (req, res) => {
   } catch (err) {
     res.json({ message: err });
   }
-});
+};
 
-router.get('/profile/:eventID', async (req, res) => {
+exports.event_findById = async (req, res) => {
   try {
     const event = await Events.findById(req.params.eventID);
     res.json(event);
   } catch (err) {
     res.json({ message: err });
   }
-});
-
-module.exports = router;
+};

@@ -1,17 +1,15 @@
-const express = require('express');
-const router = express.Router();
-const Parents = require('../../database/schemas/Parent.js');
+const Parents = require('../database/schemas/Parent.js');
 
-router.get('/all', async (req, res) => {
+exports.parent_all = async (req, res) => {
   try {
     const parent = await Parents.find();
     res.json(parent);
   } catch (err) {
     res.json({ message: err });
   }
-});
+};
 
-router.post('/create', async (req, res) => {
+exports.parent_create = async (req, res) => {
   const parent = new Parents({
     name: req.body.name,
     password: req.body.password,
@@ -35,20 +33,18 @@ router.post('/create', async (req, res) => {
     social: req.body.social,
   });
   try {
-    const savedParent = await parent.save()
+    const savedParent = await parent.save();
     res.json(savedParent);
   } catch (err) {
     res.json({ message: err });
   }
-});
+};
 
-router.get('/profile/:parentID', async (req, res) => {
-  try{
+exports.parent_findById = async (req, res) => {
+  try {
     const profile = await Parents.findById(req.params.parentID);
     res.json(profile);
   } catch (err) {
     res.json({ message: err });
   }
-});
-
-module.exports = router;
+};

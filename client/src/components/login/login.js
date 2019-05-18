@@ -10,6 +10,8 @@ export default class Login extends React.Component {
   event.preventDefault();
   const data = JSON.stringify(this.state);
   this.setState({ email: '', password: ''});
+  this.props.history.push('/event')
+
 };
 
 handleChange = event => {
@@ -32,7 +34,7 @@ handleChange = event => {
       </div>
 
       <button type='submit'>Submit</button>
-  
+
 
 </form>
   </div>

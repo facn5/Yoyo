@@ -1,7 +1,7 @@
 import React from 'react' ;
 import './card.css'
 
-export default class Events extends React.Component {
+export default class EventCard extends React.Component {
   state = {
     day:"Sunday, 13th of May",
     name:"Peanuts Football",

@@ -6,6 +6,7 @@ import Login from "./login/login";
 import Events from "./events/events";
 import ParentProfile from './parentProfile/parentProfile'
 import ParentInfo from './parentInfo/parentInfo'
+import BookNowContainer from "./bookNow/bookNowContainer"
 
 class App extends Component {
   render() {
@@ -16,7 +17,9 @@ class App extends Component {
         <Route path="/signup/" exact component={ParentSignup} />
         <Route path="/login/" exact component={Login} />
         <Route path="/profile/" exact component={ParentProfile} />
-        <Route path="/parentinfo" exact component={ParentInfo} />
+        <Route path="/parentinfo/" exact component={ParentInfo} />
+        <Route path="/booknow/" exact component={BookNowContainer} />
+
       </Router>
     );
   }

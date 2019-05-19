@@ -1,8 +1,10 @@
 const Events = require('../database/schemas/Event.js');
+const {db} = require('../database/DBconnection');
 
 // return complete list of events
 exports.event_all = async (req, res) => {
   try {
+    db.once('open', () => { console.log('connection opened') });    
     const events = await Events.find();
     res.json(events);
   } catch (err) {
@@ -26,6 +28,7 @@ exports.event_create = async (req, res) => {
     languages: req.body.languages,
   });
   try {
+    db.once('open', () => console.log('connection opened'));
     const savedEvent = await event.save();
     res.json(savedEvent);
   } catch (err) {
@@ -36,6 +39,7 @@ exports.event_create = async (req, res) => {
 // find an event by ID
 exports.event_findById = async (req, res) => {
   try {
+    db.once('open', () => console.log('connection opened'));
     const event = await Events.findById(req.params.eventID);
     res.json(event);
   } catch (err) {
@@ -46,6 +50,7 @@ exports.event_findById = async (req, res) => {
 // find events by location
 exports.event_findByLocation = async (req, res) => {
   try {
+    db.once('open', () => console.log('connection opened'));
     const event = await Events.find({ location: req.params.location });
     res.json(event);
   } catch (err) {
@@ -56,6 +61,7 @@ exports.event_findByLocation = async (req, res) => {
 // find events by superpowers
 exports.event_findBySuperpowers = async (req, res) => {
   try {
+    db.once('open', () => console.log('connection opened'));
     const event = await Events.find({ location: 'Haifa' });
     res.json(event);
   } catch (err) {
@@ -66,6 +72,7 @@ exports.event_findBySuperpowers = async (req, res) => {
 // delete an event by ID
 exports.event_delete = async (req, res) => {
   try {
+    db.once('open', () => console.log('connection opened'));
     const event = await Events.findByIdAndDelete(req.params.eventID);
     res.json(event);
   } catch (err) {
@@ -76,6 +83,7 @@ exports.event_delete = async (req, res) => {
 // update an event by ID
 exports.event_update = async (req, res) => {
   try {
+    db.once('open', () => console.log('connection opened'));
     const event = await Events.findByIDAndUpdate(req.params.eventID, {$set:{termPrice: req.body}}, { new: true });
     console.log(req.body);
     res.json(event);

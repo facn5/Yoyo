@@ -11,8 +11,6 @@ export class ParentSignup extends Component {
 
   };
 
-
-
   handleChange = event => {
     const target = event.target;
     const value = target.type === "checkbox" ? target.checked : target.value;
@@ -32,7 +30,7 @@ export class ParentSignup extends Component {
       location: ""
     });
 
-     this.props.history.push('/events')
+     this.props.history.push('/parent/create')
   };
 
 

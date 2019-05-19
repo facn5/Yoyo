@@ -13,7 +13,7 @@ export default class Navbar extends React.Component {
         <div className="navbar">
           <StyledButton name="profile" url="/profile/" />
           <StyledButton name="events" url="/events/" />
-          <StyledButton name="info" url="/info/" />
+          <StyledButton name="info" url="/parentinfo/" />
         </div>
 
 </>

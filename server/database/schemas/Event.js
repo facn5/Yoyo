@@ -11,9 +11,10 @@ const Event = new Schema({
   singlePrice: Number,
   termPrice: Number,
   maxChild: Number,
-  ages: String,
-  superpowers: String,
-  languages: String,
+  minAge: Number,
+  maxAge: Number,
+  languages: Array,
+  superpowers: Array,
 }, {
   timestamps: true,
 });

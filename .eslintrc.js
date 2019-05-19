@@ -1,11 +1,11 @@
 module.exports = {
   parser: "babel-eslint",
   extends: "airbnb-base",
-  "env": {
+  env: {
     "browser": true,
     "node": true
   },
-  "rules": {
+  rules: {
     "no-console": "off",
     "comma-dangle": "off",
     "react/jsx-filename-extension": "off"

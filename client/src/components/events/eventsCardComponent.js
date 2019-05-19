@@ -1,6 +1,4 @@
 import React from "react";
-import './eventsCardComponent.css';
-
 export default class EventCard extends React.Component {
 
   render() {

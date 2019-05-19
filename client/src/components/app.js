@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import SignupLogin from "./landing-page/landing-page";
 import {ParentSignup}  from "./parent-signup-form/parent-signup";
 import ParentProfile  from "./parentProfile/parentProfile";
+import ParentInfo  from "./parentInfo/parentInfo";
 import Login from "./login/login";
 import Events from "./events/events";
 
@@ -16,10 +17,11 @@ class App extends Component {
         <Route path="/signup" exact component={ParentSignup} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/profile" component={ParentProfile} />
+        <Route exact path="/info" component={ParentInfo} />
 
         </Switch>
       </Router>
-    );
+    );  
   }
 }
 

@@ -40,7 +40,7 @@ class App extends Component {
       ++idToBeAdded;
     }
 
-    axios.post('http://localhost:3001/api/putData', {
+    axios.post('api/putData', {
       id: idToBeAdded,
       message: message
     });

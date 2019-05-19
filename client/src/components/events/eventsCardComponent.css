@@ -1,0 +1,17 @@
+
+.titles {
+  display:flex;
+  justify-content: space-around;
+}
+h1 {
+  font-family: "BioRhyme";
+  color: #653620;
+}
+
+.btn {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1px;
+  height: 100px;
+  width: 350px;
+}

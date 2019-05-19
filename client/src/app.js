@@ -54,7 +54,7 @@ class App extends Component {
       }
     });
 
-    axios.delete('http://localhost:3001/api/deleteData', {
+    axios.delete('api/deleteData', {
       data: {
         id: objIdToDelete
       }

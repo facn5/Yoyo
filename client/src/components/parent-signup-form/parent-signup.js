@@ -1,6 +1,6 @@
 
 import React, { Component } from "react";
-import './signup.css'	
+import './signup.css'
 export class ParentSignup extends Component {
   state = {
     name: "",
@@ -32,7 +32,7 @@ export class ParentSignup extends Component {
       location: ""
     });
 
-     this.props.history.push('/event')
+     this.props.history.push('/events')
   };
 
 

@@ -6,19 +6,17 @@ import ParentInfo  from "../parentInfo/parentInfo";
 import ParentProfile  from "../parentProfile/parentProfile";
 import "./index.css";
 
-export default class navbar extends React.Component {
+export default class Navbar extends React.Component {
   render() {
     return (
-      <Router>
+  <>
         <div className="navbar">
           <StyledButton name="profile" url="/profile/" />
           <StyledButton name="events" url="/events/" />
-          <StyledButton name="info" url="/info/" />
+          <StyledButton name="info" url="/parentinfo/" />
         </div>
-        <Route path="/info/" component={ParentInfo} />
-        <Route path="/events/" component={Events} />
-        <Route path="/profile/" component={ParentProfile} />
-      </Router>
+
+</>
     );
   }
 }

@@ -1,0 +1,9 @@
+.three-columns{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 2%;
+  background-color: #6FDDED;
+}
+.event-card{
+  margin-top: 5%;
+}

@@ -2,7 +2,6 @@ import React from 'react' ;
 
 import HeaderC from '../header/index';
 import Navbar from "../navbar/index";
-import StyledButton from "../button/index";
 import './profile.css';
 
 

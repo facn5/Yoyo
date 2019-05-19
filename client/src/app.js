@@ -28,7 +28,7 @@ class App extends Component {
   }
 
   getDataFromDb = () => {
-    fetch('http://localhost:3001/api/getData')
+    fetch('api/getData')
       .then(data => data.json())
       .then(res => this.setState({data: res.data}));
   };

@@ -1,5 +1,4 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { StyledButton } from "../button/index";
 
 
@@ -16,7 +15,7 @@ export default class Navbar extends React.Component {
         </div>
 
 
-      </Router>
+    
 
 </>
 

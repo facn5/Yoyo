@@ -1,8 +1,10 @@
 import React from 'react' ;
+
 import HeaderC from '../header/index';
 import Navbar from "../navbar/index";
 import StyledButton from "../button/index";
 import './profile.css';
+
 
 export default class ParentProfile extends React.Component {
   state={
@@ -16,6 +18,7 @@ export default class ParentProfile extends React.Component {
   render() {
     return (
       <div>
+
       <HeaderC/>
             <h1>Parent's Desk</h1>
             <Navbar/>
@@ -28,6 +31,7 @@ export default class ParentProfile extends React.Component {
     <pre>Current Events:{this.state.curevents}</pre>
     <button>Logout</button>
       </div>
+
       </div>
 
      )

@@ -1,8 +1,6 @@
-import React from 'react' ;
+import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import HeaderC from '../header/index';
-import Navbar from '../navbar/index';
-import './info.css';
+
 
 export default class ParentInfo extends React.Component {
 state = {

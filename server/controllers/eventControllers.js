@@ -1,10 +1,10 @@
 const Events = require('../database/schemas/Event.js');
-const {db} = require('../database/DBconnection');
+const { db } = require('../database/DBconnection');
 
 // return complete list of events
 exports.event_all = async (req, res) => {
   try {
-    db.once('open', () => { console.log('connection opened') });    
+    db.once('open', () => { console.log('connection opened'); });
     const events = await Events.find();
     res.json(events);
   } catch (err) {

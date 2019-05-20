@@ -1,0 +1,37 @@
+.name {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+
+}
+.description {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+  font-size: 18px;
+  background-color: #dbf3f7;
+  background-color: white;
+
+}
+.infocontTop {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 40px;
+}
+.infocontBot {
+  display: flex;
+  justify-content: space-around;
+}
+
+.info {
+  background-color: #a2bebf;
+}
+.infoTotal {
+  background-color: #a2bebf;
+
+}
+.booknowbtn{
+  display: flex;
+  justify-content: center;
+
+}

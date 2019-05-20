@@ -1,8 +1,8 @@
 .name {
   display: flex;
   justify-content: center;
-  background-color: #dbf3f7;
-  box-shadow: inset 0px 6px 7px 2px black;
+  background-color: white;
+
 }
 .description {
   display: flex;
@@ -10,8 +10,8 @@
   margin-bottom: 60px;
   font-size: 18px;
   background-color: #dbf3f7;
-  background-color: #d3ebef;
-  box-shadow: inset -1px 4px 4px 2px #3e4848;
+  background-color: white;
+
 }
 .infocontTop {
   display: flex;
@@ -28,7 +28,7 @@
 }
 .infoTotal {
   background-color: #a2bebf;
-  box-shadow: inset 1px -7px 19px black;
+
 }
 .booknowbtn{
   display: flex;

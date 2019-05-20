@@ -7,6 +7,7 @@
     "babel-plugin-styled-components": "^1.10.0",
     "body-parser": "^1.19.0",
     "compression": "^1.7.4",
+    "concurrently": "^4.1.0",
     "express": "^4.16.4",
     "mongodb": "^3.2.4",
     "react": "^16.8.6",
@@ -45,7 +46,9 @@
   },
   "scripts": {
     "start": "webpack-dev-server --open --hot --mode development",
-    "build": "webpack --mode production",
+    "heroku-postbuild": "webpack --mode production",
+    "server": "node index.js",
+    "dev": "concurrently \"npm start\" \"cd server && npm start\"",
     "test": "jest"
   },
   "repository": {

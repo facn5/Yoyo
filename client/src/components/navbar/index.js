@@ -1,9 +1,7 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { StyledButton } from "../button/index";
-import Events from "../events/events";
-import ParentInfo  from "../parentInfo/parentInfo";
-import ParentProfile  from "../parentProfile/parentProfile";
+
+
 import "./index.css";
 
 export default class Navbar extends React.Component {
@@ -16,7 +14,11 @@ export default class Navbar extends React.Component {
           <StyledButton name="info" url="/parentinfo/" />
         </div>
 
+
+    
+
 </>
+
     );
   }
 }

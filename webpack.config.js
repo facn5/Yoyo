@@ -15,12 +15,12 @@ module.exports = {
     ],
   },
   devServer: {
+    historyApiFallback: true,
     port: 3000,
     open: true,
     proxy: {
-      "/api": "http://localhost:8080"
-    }
-    // historyApiFallback: true,
+      '/api': 'http://localhost:8080'
+    },
   },
   plugins: [new HtmlWebpackPlugin({ template: './client/src/index.html' })],
 };

@@ -46,7 +46,7 @@
   },
   "scripts": {
     "start": "webpack-dev-server --open --hot --mode development",
-    "build": "webpack --mode production",
+    "heroku-postbuild": "webpack --mode production",
     "server": "node index.js",
     "dev": "concurrently \"npm start\" \"cd server && npm start\"",
     "test": "jest"

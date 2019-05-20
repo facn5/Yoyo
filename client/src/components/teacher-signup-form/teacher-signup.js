@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import './teacher-signup.css';
 import axios from 'axios';
 
-export class TeacherSignUp extends Component {
+export default class TeacherSignUp extends Component {
   state = {name: "", password: "", phone: "", email: "", location: "",
   photo: "", bio: "", website: "", childSafeCert: false
   };
@@ -83,11 +83,11 @@ export class TeacherSignUp extends Component {
           onChange={this.handleChange}
         />
 
-        <label htmlFor="childSafeCert">Child-Safe Certificate?:</label>
-        <input type="childSafeCert" id="childSafeCert" name="childSafeCert"
-          value={this.state.childSafeCert}
-          onChange={this.handleChange}
-        />
+        <fieldset>
+          <legend>Child-Safe Certificate:</legend>Yes:
+          <input type="radio" name="childSafeCert" value="yes" />No:
+          <input type="radio" name="childSafeCert" value="no" checked />
+        </fieldset>
 
         <fieldset>
           <legend>Spoken Languages</legend>Arabic:

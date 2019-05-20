@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import './signup.css';
 import axios from 'axios';
 
-export class ParentSignup extends Component {
+export default class ParentSignup extends Component {
   state = {name: "", password: "", phone: "", email: "", location: "",
   };
 

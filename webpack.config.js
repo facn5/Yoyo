@@ -14,5 +14,20 @@ module.exports = {
       { test: /\.css$/, use: ['style-loader', 'css-loader'] },
     ],
   },
+  devServer: {
+    port: 8081,
+    contentBase: 'src/',
+    compress: true,
+    hot: true,
+    https: false,
+    proxy: {
+      '/api': {
+        target: 'http://localhost:8080',
+        pathRewrite: {
+          '^/api': ''
+        }
+      }
+    },
+  },
   plugins: [new HtmlWebpackPlugin({ template: './client/src/index.html' })],
 };

@@ -19,7 +19,7 @@ export class ParentSignup extends Component {
     const addParent = async () => {
       try {
         return await
-        axios.post('http://localhost:8080/parent/create', this.state)
+        axios.post('/api/parent/create', this.state)
       } catch (error) {
         console.error(error)
       }

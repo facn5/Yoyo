@@ -1,8 +1,10 @@
 import React from 'react' ;
 import {EventCard} from './eventsCardComponent'
+
 import HeaderC from '../header/index';
 import Navbar from '../navbar/index';
 import './eventsCardComponent.css' ;
+
 
 export default class Events extends React.Component {
 
@@ -10,6 +12,7 @@ export default class Events extends React.Component {
   render() {
     return (
       <div>
+
       <h1>Hello from events</h1>
       <HeaderC />
       <Navbar />
@@ -19,6 +22,7 @@ export default class Events extends React.Component {
       <h1>ages</h1>
       </div>
       <EventCard name="name" ages="ages" time="time" />
+
 
 
       </div>

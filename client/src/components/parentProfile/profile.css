@@ -1,0 +1,15 @@
+pre{
+  font-family: 'Libre Franklin';
+  margin-left: 4%;
+  text-align: left;
+}
+.Card-Info{
+  text-align: center;
+  margin-top: 10%;
+  font-size: 1.3rem;
+}
+
+h1{
+  font-family: 'BioRhyme';
+  color:#653620;
+}

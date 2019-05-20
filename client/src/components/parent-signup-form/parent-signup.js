@@ -15,10 +15,6 @@ export class ParentSignup extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    const data = JSON.stringify(this.state);
-    console.log("(Fake) submitting data: ", data);
-    this.setState({name: "", password: "", phone: "", email: "", location: ""
-    });
 
     const addParent = async () => {
       try {
@@ -30,6 +26,8 @@ export class ParentSignup extends Component {
     }
     addParent();
     this.props.history.push('/events');
+    this.setState({name: "", password: "", phone: "", email: "", location: ""
+    });
   };
 
   render() {

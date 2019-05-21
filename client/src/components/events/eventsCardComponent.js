@@ -1,13 +1,26 @@
-import React from "react";
+import React from 'react' ;
+import './eventsCardComponent.css'
 
-export const EventCard = props => {
-  return (
-    <div>
-      <button type="button" className="btn">
-        <div className="time">{props.time}</div>
-        <div className="name">{props.name}</div>
-        <div className="ages">{props.ages}</div>
-      </button>
-    </div>
-  );
-};
+export default class Events extends React.Component {
+  state = {
+    day:"Sunday, 13th of May",
+    name:"Peanuts Football",
+    time:"2pm-4pm",
+    age:"6-10",
+  };
+  render() {
+    return (
+  <div className="event-card">
+  <p>{this.state.day}</p>
+  <div className="three-columns">
+  <p>{this.state.time}</p>
+  <p>{this.state.name}</p>
+  <p>{this.state.age}</p>
+  </div>
+
+
+  </div>
+
+);
+}
+}

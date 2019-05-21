@@ -1,7 +1,7 @@
 import React from 'react' ;
 import HeaderC from '../header/index';
 import Navbar from '../navbar/index';
-import './events.css';
+import './events.css'
 import Events from './eventsCardComponent';
 
 export default class Events extends React.Component {

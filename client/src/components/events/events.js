@@ -26,6 +26,6 @@ export default class Events extends React.Component {
       </div>
       <EventCard name="name" ages="ages" time="time" />
       </div>
-     )
+   )
   }
 }

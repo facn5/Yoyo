@@ -10,6 +10,7 @@ import TeacherSignUp from "./teacher-signup-form/teacher-signup";
 import Events from "./events/events";
 import BookNowContainer from "./bookNow/bookNowContainer"
 
+
 class App extends Component {
   render() {
     return (
@@ -24,7 +25,7 @@ class App extends Component {
         <Route path="/parentinfo/" exact component={ParentInfo} />
         <Route path="/booknow/" exact component={BookNowContainer} />
       </Router>
-    );
+    ); 
   }
 }
 

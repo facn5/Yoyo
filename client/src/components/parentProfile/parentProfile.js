@@ -1,5 +1,4 @@
 import React from 'react' ;
-
 import HeaderC from '../header/index';
 import Navbar from "../navbar/index";
 import './profile.css';

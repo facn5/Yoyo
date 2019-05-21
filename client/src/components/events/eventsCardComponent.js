@@ -14,7 +14,7 @@ export default class Events extends React.Component {
   <p>{this.state.day}</p>
   <button className="three-columns">
   <pre>{this.state.time}</pre>
-  <pre>{this.state.name}</pre>
+   <pre>{this.state.name}</pre>
   <pre>{this.state.age}</pre>
   </button>
 

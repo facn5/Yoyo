@@ -1,9 +1,16 @@
-three-columns{
+.three-columns{
+  font-size: 18px;
+  width: 95%;
   display: flex;
   justify-content: space-around;
   margin-bottom: 2%;
   background-color: #6FDDED;
 }
 .event-card{
+    font-size: 18px;
   margin-top: 5%;
+}
+
+p{
+  font-weight: bold;
 }

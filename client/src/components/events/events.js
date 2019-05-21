@@ -1,5 +1,5 @@
 import React from 'react' ;
-import EventCard from './eventsCardComponent'
+import {EventCard} from './eventsCardComponent'
 import HeaderC from '../header/index';
 import Navbar from '../navbar/index';
 import './eventsCardComponent.css' ;

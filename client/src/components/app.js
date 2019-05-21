@@ -9,11 +9,11 @@ import Login from "./login/login";
 import Events from "./events/events";
 import BookNowContainer from "./bookNow/bookNowContainer"
 
+
 class App extends Component {
   render() {
     return (
-
-      <Router>
+  <Router>
         <Route path="/" exact component={SignupLogin} />
         <Route path="/events/" exact component={Events} />
         <Route path="/signup/" exact component={ParentSignup} />
@@ -24,6 +24,7 @@ class App extends Component {
 
       </Router>
     ); 
+
   }
 }
 

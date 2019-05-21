@@ -12,11 +12,11 @@ export default class Events extends React.Component {
     return (
   <div className="event-card">
   <p>{this.state.day}</p>
-  <div className="three-columns">
-  <p>{this.state.time}</p>
-  <p>{this.state.name}</p>
-  <p>{this.state.age}</p>
-  </div>
+  <button className="three-columns">
+  <pre>{this.state.time}</pre>
+  <pre>{this.state.name}</pre>
+  <pre>{this.state.age}</pre>
+  </button>
 
 
   </div>

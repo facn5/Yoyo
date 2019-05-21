@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
+    "babel-polyfill": "^6.26.0",
     "body-parser": "^1.19.0",
     "compression": "^1.7.4",
     "concurrently": "^4.1.0",
@@ -47,7 +48,7 @@
   "scripts": {
     "start": "webpack-dev-server --open --hot --mode development",
     "heroku-postbuild": "webpack --mode production",
-    "server": "node index.js",
+    "server": "node server/index.js",
     "dev": "concurrently \"npm start\" \"cd server && npm start\"",
     "test": "jest"
   },

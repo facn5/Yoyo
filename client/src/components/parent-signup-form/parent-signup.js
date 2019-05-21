@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import './signup.css';
+import axios from 'axios';
 
 export class ParentSignup extends Component {
   state = {name: "", password: "", phone: "", email: "", location: "",
@@ -14,11 +15,19 @@ export class ParentSignup extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    const data = JSON.stringify(this.state);
-    console.log("(Fake) submitting data: ", data);
+
+    const addParent = async () => {
+      try {
+        return await
+        axios.post('/api/parent/create', this.state)
+      } catch (error) {
+        console.error(error)
+      }
+    }
+    addParent();
+    this.props.history.push('/events');
     this.setState({name: "", password: "", phone: "", email: "", location: ""
     });
-    this.props.history.push('/events')
   };
 
   render() {

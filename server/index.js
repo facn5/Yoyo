@@ -1,5 +1,5 @@
 const app = require('./app.js');
 
-app.listen(8080, () => {
-  console.log('Node/Express server running on port 8080');
-});
+const port = process.env.PORT || 8080;
+
+app.listen(port, () => console.log(`Node/Express server running on port ${port}`));

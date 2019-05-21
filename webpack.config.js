@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './client/src/index.js',
+  entry: ['babel-polyfill', './client/src/index.js'],
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index_bundle.js',
@@ -15,11 +15,18 @@ module.exports = {
     ],
   },
   devServer: {
-    historyApiFallback: true,
-    port: 3000,
-    open: true,
+    port: 8081,
+    contentBase: 'src/',
+    compress: true,
+    hot: true,
+    https: false,
     proxy: {
-      '/api': 'http://localhost:8080'
+      '/api': {
+        target: 'http://localhost:8080',
+        pathRewrite: {
+          '^/api': ''
+        }
+      }
     },
   },
   plugins: [new HtmlWebpackPlugin({ template: './client/src/index.html' })],

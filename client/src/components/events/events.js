@@ -4,15 +4,11 @@ import HeaderC from '../header/index';
 import Navbar from '../navbar/index';
 import './eventsCardComponent.css' ;
 
-
 export default class Events extends React.Component {
-
-
   render() {
     return (
       <div>
    <img className="search" src="https://i.imgur.com/9PAikvm.png"/>
-
       <h1>Hello from events</h1>
       <HeaderC />
       <Navbar />
@@ -22,11 +18,7 @@ export default class Events extends React.Component {
       <h1>ages</h1>
       </div>
       <EventCard name="name" ages="ages" time="time" />
-
-
-
       </div>
-
      )
   }
 }

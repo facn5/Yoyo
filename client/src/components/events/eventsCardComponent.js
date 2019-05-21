@@ -1,13 +1,20 @@
-import React from "react";
+import React from 'react' ;
+import './eventsCardComponent.css'
 
-export const EventCard = props => {
-  return (
-    <div>
-      <button type="button" className="btn">
-        <div className="time">{props.time}</div>
-        <div className="name">{props.name}</div>
-        <div className="ages">{props.ages}</div>
-      </button>
-    </div>
-  );
-};
+export default class Events extends React.Component {
+  render() {
+    return (
+  <div className="event-card">
+  <p>{this.props.day}</p>
+  <button className="three-columns">
+  <pre>{this.props.time}</pre>
+   <pre>{this.props.name}</pre>
+  <pre>{this.props.age}</pre>
+  </button>
+
+
+  </div>
+
+);
+}
+}

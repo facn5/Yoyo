@@ -13,7 +13,7 @@ export default class TeacherTOS extends React.Component {
           <li>I will reserve for adequate space for the activities I am offering.</li>
           <li>I will arrive to the location no later than 10 minutes prior to the
            start of each session.  I will begin and end on time.</li>
-          <li>I will not cancel events on less than 48 hours' notice except
+          <li>I will not cancel events on less than 48 hours notice except
           in case of emergency or illness.</li>
           <li>I will not meet or contact any children outside of the events
            or classes.  This includes via email, social media, text message,

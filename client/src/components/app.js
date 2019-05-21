@@ -25,7 +25,7 @@ class App extends Component {
         <Route path="/parentinfo/" exact component={ParentInfo} />
         <Route path="/booknow/" exact component={BookNowContainer} />
       </Router>
-    ); 
+    );
   }
 }
 

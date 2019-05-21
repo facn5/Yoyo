@@ -16,7 +16,7 @@ export default class Events extends React.Component {
    <div className="twobuttons">
    <button className="next">This Week:12-19 May</button>   <button>Next Week:19-26May </button>
    </div>
-  <EventCard time={time} name={name} age={age}/>
+  <EventCard time="time" name="name" age="age"/>
    <img className="search" src="https://i.imgur.com/9PAikvm.png"/>
 
       </div>

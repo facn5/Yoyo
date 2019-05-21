@@ -3,6 +3,11 @@ Helping parents find classes and events suited to their child's age and superpow
 
 <img src="https://user-images.githubusercontent.com/32282170/58073375-0d0b9e00-7bab-11e9-937f-d812fcbb1c87.png" alt="yoyo app" width="300px" height="auto">
 
+## How to run locally
+* Clone this repo
+* **npm i** (or **sudo npm i**) in both home directory and /server directory (there are 2 package.json files)
+* back in home directory, **npm run dev** to compile React/Webpack/Babel front-end and start Node/Express server.
+
 ## Stakeholders
 * Parents
 * Teachers

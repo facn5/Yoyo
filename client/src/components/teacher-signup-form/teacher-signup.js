@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import './signup.css';
+import './teacher-signup.css';
 import axios from 'axios';
 
-export default class ParentSignup extends Component {
+export default class TeacherSignUp extends Component {
   state = {name: "", password: "", phone: "", email: "", location: "",
+  photo: "", bio: "", website: "", childSafeCert: false
   };
 
   handleChange = event => {
@@ -16,17 +17,18 @@ export default class ParentSignup extends Component {
   handleSubmit = event => {
     event.preventDefault();
 
-    const addParent = async () => {
+    const addTeacher = async () => {
       try {
         return await
-        axios.post('/api/parent/create', this.state)
+        axios.post('/api/teacher/create', this.state)
       } catch (error) {
         console.error(error)
       }
     }
-    addParent();
+    addTeacher();
     this.props.history.push('/events');
-    this.setState({name: "", password: "", phone: "", email: "", location: ""
+    this.setState({name: "", password: "", phone: "", email: "", location: "",
+    photo: "", bio: "", website: "", childSafeCert: false
     });
   };
 
@@ -63,8 +65,32 @@ export default class ParentSignup extends Component {
           onChange={this.handleChange}
         />
 
+        <label htmlFor="photo">Photo:</label>
+        <input type="photo" id="photo" name="photo"
+          value={this.state.photo}
+          onChange={this.handleChange}
+        />
+
+        <label htmlFor="bio">Biography:</label>
+        <input type="bio" id="bio" name="bio"
+          value={this.state.bio}
+          onChange={this.handleChange}
+        />
+
+        <label htmlFor="website">Website:</label>
+        <input type="website" id="website" name="website"
+          value={this.state.website}
+          onChange={this.handleChange}
+        />
+
         <fieldset>
-          <legend>Child Languages</legend>Arabic:
+          <legend>Child-Safe Certificate:</legend>Yes:
+          <input type="radio" name="childSafeCert" value="yes" />No:
+          <input type="radio" name="childSafeCert" value="no" checked />
+        </fieldset>
+
+        <fieldset>
+          <legend>Spoken Languages</legend>Arabic:
           <input type="checkbox" id="arabic" name="arabic" value="arabic"
             onChange={this.handleChange}
           />
@@ -78,42 +104,6 @@ export default class ParentSignup extends Component {
           />
           Russian:
           <input type="checkbox" id="russian" name="russian" value="russian"
-            onChange={this.handleChange}
-          />
-        </fieldset>
-
-        <fieldset>
-          <legend>Child Ages</legend>
-          birth to 6 months:
-          <input type="checkbox" id="birth to .5" name="birth to .5" value="birth to .5"
-            onChange={this.handleChange}
-          />
-          6 months to 1 year:
-          <input type="checkbox" id=".5 to 1" name=".5 to 1" value=".5 to 1"
-            onChange={this.handleChange}
-          />
-          1 to 2:
-          <input type="checkbox" id="1 to 2" name="1 to 2" value="1 to 2"
-            onChange={this.handleChange}
-          />
-          2 to 4:
-          <input type="checkbox" id="2 to 4" name="2 to 4" value="2 to 4"
-            onChange={this.handleChange}
-          />
-          5 to 6:
-          <input type="checkbox" id="5 to 6" name="5 to 6" value="5 to 6"
-            onChange={this.handleChange}
-          />
-          7 to 8:
-          <input type="checkbox" id="7 to 8" name="7 to 8" value="7 to 8"
-            onChange={this.handleChange}
-          />
-          9 to 10:
-          <input type="checkbox" id="9 to 10" name="9 to 10" value="9 to 10"
-            onChange={this.handleChange}
-          />
-          11+:
-          <input type="checkbox" id="11+" name="11+" value="11+"
             onChange={this.handleChange}
           />
         </fieldset>

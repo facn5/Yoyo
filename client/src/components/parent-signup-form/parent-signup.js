@@ -32,9 +32,11 @@ export default class ParentSignup extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label htmlFor="name">Name:</label>
-        <input type="text" id="name" name="name"
+      <div>
+      <h2>Parent Signup Form</h2>
+      <form className="form" onSubmit={this.handleSubmit}>
+        <label className="inputs" htmlFor="name">Name:</label>
+        <input className="inputs" type="text" id="name" name="name"
           value={this.state.name}
           onChange={this.handleChange}
         />
@@ -145,8 +147,9 @@ export default class ParentSignup extends Component {
           />
         </fieldset>
 
-        <button type="submit"  >Submit</button>
+        <button className="submit" type="submit"  >Submit</button>
       </form>
+    </div>
     );
   }
 }

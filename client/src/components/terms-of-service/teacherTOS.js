@@ -5,7 +5,7 @@ import './TOS.css';
 export default class TeacherTOS extends React.Component {
   render(){
     return (
-      <div>
+      <div className="main-container">
         <h1>Teacher Rules</h1>
         <ul>
           <li>I certify that all information I give to yoyo app is correct

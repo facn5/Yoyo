@@ -10,29 +10,30 @@ exports.parent_all = async (req, res) => {
 };
 
 exports.parent_create = async (req, res) => {
-  const parent = new Parents({
-    name: req.body.name,
-    password: req.body.password,
-    phone: req.body.phone,
-    email: req.body.email,
-    arabic: req.body.arabic,
-    english: req.body.english,
-    hebrew: req.body.hebrew,
-    russian: req.body.russian,
-    birthTo1: req.body.birthTo1,
-    oneToTwo: req.body.oneToTwo,
-    twoToFour: req.body.twoToFour,
-    fiveToSix: req.body.fiveToSix,
-    sevenToEight: req.body.sevenToEight,
-    nineToTen: req.body.nineToTen,
-    sports: req.body.sports,
-    art: req.body.art,
-    theatre: req.body.theatre,
-    computers: req.body.computers,
-    music: req.body.music,
-    social: req.body.social,
-  });
   try {
+    const hashedPassword = await hashPass.hashMe(req.body.password);
+    const parent = new Parents({
+      name: req.body.name,
+      password: hashedPassword,
+      phone: req.body.phone,
+      email: req.body.email,
+      arabic: req.body.arabic,
+      english: req.body.english,
+      hebrew: req.body.hebrew,
+      russian: req.body.russian,
+      birthTo1: req.body.birthTo1,
+      oneToTwo: req.body.oneToTwo,
+      twoToFour: req.body.twoToFour,
+      fiveToSix: req.body.fiveToSix,
+      sevenToEight: req.body.sevenToEight,
+      nineToTen: req.body.nineToTen,
+      sports: req.body.sports,
+      art: req.body.art,
+      theatre: req.body.theatre,
+      computers: req.body.computers,
+      music: req.body.music,
+      social: req.body.social,
+     });
     const savedParent = await parent.save();
     res.json(savedParent);
   } catch (err) {

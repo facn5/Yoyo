@@ -1,7 +1,6 @@
 const express = require('express');
 const bcrypt = require('bcrypt');
 const mongoose = require('mongoose');
-const cookieparser = require('cookie');
 const Parents = require('../database/schemas/Parent.js');
 
 require('env2')('../../config.env');
@@ -33,8 +32,8 @@ exports.validtor = ({ email, password }, res) => {
         if (err) res.json({ success: false, msg: 'Please try again later!' });
         else if (!success) res.json({ success: false, msg: 'Username/password is invalid!' });
         else {
-          console.log('sucess');
-          res.cookie('id', cb._id, { httpOnly: true });
+          console.log('suc', cb._id);
+          res.cookie('id', cb._id.toString());
 
           res.json({ success: true, msg: 'Logged in successfully!' });
         }

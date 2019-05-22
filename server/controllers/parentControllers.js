@@ -1,5 +1,6 @@
 const Parents = require('../database/schemas/Parent.js');
 const hashPass = require('../authentication/hashPass');
+const authentication = require('../authentication/authentication');
 
 exports.parent_all = async (req, res) => {
   try {
@@ -48,6 +49,19 @@ exports.parent_findById = async (req, res) => {
   try {
     const profile = await Parents.findById(req.params.parentID);
     res.json(profile);
+  } catch (err) {
+    res.json({ message: err });
+  }
+};
+exports.parent_validtor = (req, res) => {
+  try {
+    const checkuser = {
+      email: req.body.email,
+      password: req.body.password
+
+    };
+    authentication.validtor(checkuser, res);
+    console.log('hi from validtor');
   } catch (err) {
     res.json({ message: err });
   }

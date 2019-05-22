@@ -1,7 +1,6 @@
 const express = require('express');
 const bcrypt = require('bcrypt');
 const mongoose = require('mongoose');
-const cookieparser = require('cookie');
 const Parents = require('../database/schemas/Parent.js');
 
 require('env2')('../../config.env');

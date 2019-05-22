@@ -16,6 +16,18 @@ export const EventProvider = (props) => {
     maxAge: 25,
     languages: ["Arabic", "English", "Hebrew"],
     superpowers: ["sports", "social"],
+  },  { name: "Roni the Clown",
+    location: "Nazareth",
+    description: "Fun time with games and contests. Roni and Friends ",
+    photo: "photo URL",
+    days: "Saturday",
+    singlePrice: 30,
+    termPrice: 120,
+    maxChild: 30,
+    minAge: 5,
+    maxAge: 11,
+    languages: ["Arabic", "English", "Hebrew"],
+    superpowers: ["sports", "social"],
     }
   ]);
   return(<EventContext.Provider value={[events, setEvents]}>{props.children}

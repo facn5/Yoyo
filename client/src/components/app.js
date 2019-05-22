@@ -11,13 +11,16 @@ import Events from "./events/events";
 import BookNowContainer from "./bookNow/bookNowContainer";
 import ParentTOS from "./terms-of-service/parentTOS";
 import TeacherTOS from "./terms-of-service/teacherTOS";
+import { EventProvider } from "./eventContext/EventContext";
 
 class App extends Component {
   render() {
     return (
       <Router>
         <Route path="/" exact component={SignupLogin} />
+        <EventProvider>
         <Route path="/events" exact component={Events} />
+        </EventProvider>
         <Route path="/signup" exact component={ParentSignup} />
         <Route path="/login" exact component={Login} />
         <Route path="/teacherSignUp" exact component={TeacherSignUp} />

@@ -1,6 +1,6 @@
 import React from "react";
 
-export const EventCard = props => {
+const EventCard = props => {
   return (
     <div>
       <button type="button" className="btn">
@@ -11,3 +11,5 @@ export const EventCard = props => {
     </div>
   );
 };
+
+export default EventCard;

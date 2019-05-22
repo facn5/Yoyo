@@ -1,5 +1,6 @@
 import React from 'react' ;
 import './login.css'
+import axios from 'axios';
 
 export default class Login extends React.Component {
   state = {
@@ -7,10 +8,20 @@ export default class Login extends React.Component {
  };
 
  handleSubmit = event => {
-  event.preventDefault();
-  const data = JSON.stringify(this.state);
-  this.setState({ email: '', password: ''});
-  this.props.history.push('/events')
+   event.preventDefault();
+
+   const valid = async () => {
+     try {
+       return await
+       axios.post('/api/parent/user', this.state)
+     } catch (error) {
+       console.error(error)
+     }
+   }
+   valid()
+   this.setState({ email: '', password: ''})
+
+
 
 };
 

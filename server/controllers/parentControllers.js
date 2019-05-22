@@ -1,4 +1,5 @@
 const Parents = require('../database/schemas/Parent.js');
+const hashPass = require('../authentication/hashPass');
 
 exports.parent_all = async (req, res) => {
   try {

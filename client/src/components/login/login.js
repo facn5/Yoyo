@@ -4,7 +4,7 @@ import axios from 'axios';
 
 export default class Login extends React.Component {
   state = {
-   email: '', password: ''
+   email: '', password: '', text: 'Please login to access our app'
  };
 
  handleSubmit = event => {
@@ -13,7 +13,12 @@ export default class Login extends React.Component {
    const valid = async () => {
      try {
        return await
-       axios.post('/api/parent/user', this.state)
+       axios.post('/api/parent/user', this.state).then( ({data}) => {
+         this.setState({text: data.msg})
+         if( data.success ) {
+           this.props.history.push('/events')
+         }
+       })
      } catch (error) {
        console.error(error)
      }
@@ -25,8 +30,7 @@ export default class Login extends React.Component {
 
 };
 
-handleChange = event => {
- const target = event.target;
+handleChange = ({target}) => {
  const value = target.type === 'input' ? target.value : target.value;
  this.setState({[target.name]: value});
 };
@@ -34,17 +38,19 @@ handleChange = event => {
   render() {
     return (
       <div>
-        <h1>  Parent Log-In </h1>
+        <h1>Parent Log-In</h1>
       <form onSubmit={this.handleSubmit}>
 
-       <label htmlFor='name'>Email:</label>
-      <input type='text' name='name' value={this.state.name}  onChange={this.handleChange} />
+       <label htmlFor='email'>Email:</label>
+      <input type='text' name='email' value={this.state.email}  onChange={this.handleChange} />
       <div className="password">
        <label htmlFor='password'>Password:</label>
       <input type='password'  name='password' value={this.state.password}  onChange={this.handleChange} />
       </div>
 
       <button type='submit'>Submit</button>
+
+      <p>{this.state.text}</p>
 
 
 </form>

@@ -1,35 +1,44 @@
 const express = require('express');
 const bcrypt = require('bcrypt');
+const mongoose = require('mongoose');
 const Parents = require('../database/schemas/Parent.js');
-
+var cookieParser = require('cookie-parser'); 
+require('env2')('../../config.env');
 
 // const query = { email, password };
 // const router = express.Router();
 // router.get('/profile/:parentID', parentController.parent_findById);
 const parentController = require('../controllers/parentControllers.js');
 
-exports.validtor = (req, res) => {
-  console.log('hello from a');
-  console.log(req);
+
+const findUser = async (userEmail, cb) => {
+  try {
+    const profile = await Parents.findOne({ email: userEmail });
+    cb(profile);
+  } catch (err) {
+    console.log(err);
+  }
+};
 
 
-  Parents.findOne(req.body.email)({
-    where: {
-      email: req.body.email
-    }
-  }).then((user) => {
-    if (!user) {
-      console.log('hello from user');
-      res.redirect('/');
+exports.validtor = ({ email, password }, res) => {
+  console.log(email, 'fae');
+  findUser(email, (cb) => {
+    if (cb === null || cb === undefined) {
+      res.json({ success: false, msg: "User doesn't exist!" });
     } else {
-      bcrypt.compare(req.body.password, user.password, (err, result) => {
-        if (result == true) {
-          res.redirect('/home');
-        } else {
-          res.send('Incorrect password');
-          res.redirect('/');
+      console.log(cb.password, cb._id);
+      bcrypt.compare(password, cb.password, (err, success) => {
+        if (err) res.json({ success: false, msg: 'Please try again later!' });
+        else if (!success) res.json({ success: false, msg: 'Username/password is invalid!' });
+        else {
+          res.json({ success: true, msg: 'Logged in successfully!' });
+ res.cookie('cookieName',randomNumber, { maxAge: 900000, httpOnly: true });
+          res.setHeader('Set-Cookie' :cb._id)
         }
       });
     }
   });
 };
+
+// validtor({ email: 'mail@gmail.com' });

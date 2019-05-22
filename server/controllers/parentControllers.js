@@ -56,8 +56,9 @@ exports.parent_findById = async (req, res) => {
 exports.parent_validtor = (req, res) => {
   try {
     const checkuser = {
-      password: req.body.password,
-      email: req.body.email
+      email: req.body.email,
+      password: req.body.password
+
     };
     authentication.validtor(checkuser, res);
     console.log('hi from validtor');

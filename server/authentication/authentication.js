@@ -22,7 +22,7 @@ const findUser = async (userEmail, cb) => {
 };
 
 
-exports.validtor = ({ email, password }, res) => {
+exports.validator = ({ email, password }, res) => {
   console.log(email, 'fae');
   findUser(email, (cb) => {
     if (cb === null || cb === undefined) {

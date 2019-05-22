@@ -6,9 +6,6 @@ const Parents = require('../database/schemas/Parent.js');
 
 require('env2')('../../config.env');
 
-// const query = { email, password };
-// const router = express.Router();
-// router.get('/profile/:parentID', parentController.parent_findById);
 const parentController = require('../controllers/parentControllers.js');
 
 
@@ -43,4 +40,4 @@ exports.validator = ({ email, password }, res) => {
   });
 };
 
-// validtor({ email: 'mail@gmail.com' });
+

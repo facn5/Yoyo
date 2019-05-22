@@ -60,7 +60,7 @@ exports.parent_validator = (req, res) => {
       password: req.body.password
 
     };
-    authentication.validtor(checkuser, res);
+    authentication.validator(checkuser, res);
     console.log('hi from validtor');
   } catch (err) {
     res.json({ message: err });

@@ -1,8 +1,9 @@
 const express = require('express');
 const bcrypt = require('bcrypt');
 const mongoose = require('mongoose');
+const cookieparser = require('cookie');
 const Parents = require('../database/schemas/Parent.js');
-var cookieParser = require('cookie-parser'); 
+
 require('env2')('../../config.env');
 
 // const query = { email, password };
@@ -32,9 +33,10 @@ exports.validtor = ({ email, password }, res) => {
         if (err) res.json({ success: false, msg: 'Please try again later!' });
         else if (!success) res.json({ success: false, msg: 'Username/password is invalid!' });
         else {
+          console.log('sucess');
+          res.cookie('id', cb._id, { httpOnly: true });
+
           res.json({ success: true, msg: 'Logged in successfully!' });
- res.cookie('cookieName',randomNumber, { maxAge: 900000, httpOnly: true });
-          res.setHeader('Set-Cookie' :cb._id)
         }
       });
     }

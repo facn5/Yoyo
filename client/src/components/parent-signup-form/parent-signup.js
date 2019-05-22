@@ -25,7 +25,7 @@ export default class ParentSignup extends Component {
       }
     }
     addParent();
-    this.props.history.push('/events');
+    this.props.history.push('/login');
     this.setState({name: "", password: "", phone: "", email: "", location: ""
     });
   };

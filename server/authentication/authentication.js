@@ -5,9 +5,6 @@ const Parents = require('../database/schemas/Parent.js');
 
 require('env2')('../../config.env');
 
-// const query = { email, password };
-// const router = express.Router();
-// router.get('/profile/:parentID', parentController.parent_findById);
 const parentController = require('../controllers/parentControllers.js');
 
 
@@ -21,7 +18,7 @@ const findUser = async (userEmail, cb) => {
 };
 
 
-exports.validtor = ({ email, password }, res) => {
+exports.validator = ({ email, password }, res) => {
   console.log(email, 'fae');
   findUser(email, (cb) => {
     if (cb === null || cb === undefined) {
@@ -42,4 +39,4 @@ exports.validtor = ({ email, password }, res) => {
   });
 };
 
-// validtor({ email: 'mail@gmail.com' });
+

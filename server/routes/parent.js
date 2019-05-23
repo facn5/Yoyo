@@ -7,5 +7,5 @@ const parentController = require('../controllers/parentControllers.js');
 router.get('/all', parentController.parent_all);
 router.post('/create', parentController.parent_create);
 router.get('/profile/:parentID', parentController.parent_findById);
-router.post('/user', parentController.parent_validtor);
+router.post('/user', parentController.parent_validator);
 module.exports = router;

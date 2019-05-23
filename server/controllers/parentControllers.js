@@ -53,14 +53,14 @@ exports.parent_findById = async (req, res) => {
     res.json({ message: err });
   }
 };
-exports.parent_validtor = (req, res) => {
+exports.parent_validator = (req, res) => {
   try {
     const checkuser = {
       email: req.body.email,
       password: req.body.password
 
     };
-    authentication.validtor(checkuser, res);
+    authentication.validator(checkuser, res);
     console.log('hi from validtor');
   } catch (err) {
     res.json({ message: err });

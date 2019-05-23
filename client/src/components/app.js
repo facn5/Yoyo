@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-
 import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import SignupLogin from "./landing-page/landing-page";
 import ParentSignup  from "./parent-signup-form/parent-signup";

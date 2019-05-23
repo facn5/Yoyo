@@ -1,3 +1,22 @@
 * {
   text-align: center;
 }
+
+.TOS {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  width: 75%;
+  height: 4rem;
+  margin-bottom: 5%;
+  margin-top: 10%;
+  font-family: 'BioRhyme';
+  font-size: 1.3em;
+  cursor: pointer;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20%
+}

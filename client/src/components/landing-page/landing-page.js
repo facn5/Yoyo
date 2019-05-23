@@ -11,19 +11,19 @@ export default class SignupLogin extends React.Component {
             <img src="https://user-images.githubusercontent.com/32282170/57733684-01464600-7698-11e9-89e7-b9debad0bee0.png" />
           </div>
           <Link to="/parentTOS" style={{ textDecoration: "none" }}>
-            <button className="signup"> Parent Signup </button>
+            <button className="buttons"> Parent Signup </button>
           </Link>
 
           <Link to="/login" style={{ textDecoration: "none" }}>
-            <button className="login"> Parent Login </button>
+            <button className="buttons"> Parent Login </button>
           </Link>
 
           <Link to="/teacherTOS" style={{ textDecoration: "none" }}>
-            <button className="signup"> Teacher Sign-up </button>
+            <button className="buttons"> Teacher Sign-up </button>
           </Link>
 
           <Link to="/teacherLogIn" style={{ textDecoration: "none" }}>
-            <button className="login"> Teacher Login </button>
+            <button className="buttons"> Teacher Login </button>
           </Link>
         </div>
       </div>

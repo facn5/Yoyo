@@ -15,6 +15,7 @@ const Event = (props) => {
       <p>{props.description}. Age {props.minAge} to {props.maxAge}.</p>
       <p>Single price:₪{props.singlePrice}, Full term:₪{props.termPrice}</p>
       <p>Languages:{props.languages} Superpowers:{props.superpowers}</p></div>
+    </fieldset>
     </div>
   )
 }

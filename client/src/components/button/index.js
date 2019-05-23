@@ -7,7 +7,7 @@ import "./button.css";
 export const StyledButton = ({name,url})=>(
 
    <Link to={url}>
-    <button type="button">{name} </button>
+    <button className="button" type="button">{name} </button>
     </Link>
 
 

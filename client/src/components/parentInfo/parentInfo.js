@@ -15,8 +15,8 @@ suggestion:"Baby Dabke",
       <div>
       <div>
       <HeaderC/>
-            <h1>Parent's Desk</h1>
             <Navbar/>
+            <h1>Parent's Desk</h1>
             <h1>This Age </h1>
             <div className="Info">
             <p className="age-info">{this.state.name} is {this.state.age} years old and is learning to understand sequences of events.  {this.state.name} will watch you do everything from drinking a cup of tea to doing the laundry.  Explain the sequence of events to {this.state.name} as you are doing things.  Games and activities that can help {this.state.name} development during this period include:

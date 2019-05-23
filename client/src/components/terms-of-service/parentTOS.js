@@ -5,7 +5,7 @@ import './TOS.css';
 export default class ParentTOS extends React.Component {
   render() {
     return(
-      <div>
+      <div className="main-container">
         <h1>Parent Rules</h1>
         <ul>
           <li>I will be present at all times to supervise my child under age 6</li>
